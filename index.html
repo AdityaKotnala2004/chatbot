@@ -1,26 +1,36 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>iChat</title>
-        <script defer src="http://localhost:7000/socket.io/socket.io.js"></script>
-        <script defer src="js/client.js"></script>
+        <title>AI ChatBot</title>
         <link rel="stylesheet" href="css/style.css">
+        <!-- Add Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     </head>    
-        <body>
-            <nav>
-                <img class="logo" src="logo.png" alt="">
-            </nav>
+    <body>
+        <nav>
+            <h1 class="app-title">AI ChatBot</h1>
+        </nav>
+        
+        <div class="chat-wrapper">
             <div class="container">
-                <div class="message right">hi</div>
-                <div class="message left">badia</div>
+                <!-- Messages will appear here -->
+                <div class="system-message">Welcome to AI ChatBot! Start messaging now.</div>
             </div>
             <div class="send">
                 <form action="#" id="send-container">
-                    <input type="text" name="messageInp" id="messageInp">
-                    <button class="btn" type="submit">Send</button>
+                    <input type="text" name="messageInp" id="messageInp" placeholder="Type a message...">
+                    <button class="btn" type="submit">
+                        <i class="fas fa-paper-plane"></i> Send
+                    </button>
                 </form>
             </div>
-
-        </body>
+        </div>
+        
+        <!-- Use socket.io directly from CDN -->
+        <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+        <!-- Include client.js as a regular script -->
+        <script src="js/client.js"></script>
+    </body>
 </html>
